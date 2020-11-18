@@ -28,12 +28,15 @@ x = -b +- sqtr(b**2 - 4 * a * c) / 2 * a
 
 from math import sqrt
 
-a, b, c = [float(x) for x in input().split(" ")]
-delta = b**2 - 4 * a * c
-r1 = (-b + sqrt(delta)) / (2 * a)
-r2 = (-b - sqrt(delta)) / (2 * a)
-print('R1 = {:.5f}'.format(r1))
-print('R2 = {:.5f}'.format(r2))
+try:
+    a, b, c = [float(x) for x in input().split()]
+    delta = b**2 - 4 * a * c
+    r1 = (-b + sqrt(delta)) / (2 * a)
+    r2 = (-b - sqrt(delta)) / (2 * a)
+    print('R1 = {:.5f}'.format(r1))
+    print('R2 = {:.5f}'.format(r2))
+except:
+    print('Impossivel calcular')
 
 
 
